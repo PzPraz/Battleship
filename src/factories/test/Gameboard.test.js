@@ -59,8 +59,6 @@ describe("Gameboard", () => {
     gameboard.placeShip(ship, 1, 1, true);
     gameboard.receiveAttack(3, 1);
 
-    console.log(gameboard.board[3][1]);
-
     expect(gameboard.board[3][1].hits.includes(2)).toBe(true);
   });
 
