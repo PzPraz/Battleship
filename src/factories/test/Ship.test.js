@@ -11,6 +11,7 @@ describe("Ship", () => {
     expect(ship).toEqual({
       length: 3,
       hits: [],
+      origin: [],
     });
   });
 

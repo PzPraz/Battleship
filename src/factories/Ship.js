@@ -2,6 +2,7 @@ class Ship {
   constructor(length) {
     this.length = length;
     this.hits = [];
+    this.origin = [];
   }
 
   hit(pos) {
@@ -13,6 +14,10 @@ class Ship {
 
   isSunk() {
     return this.length == this.hits.length;
+  }
+
+  setOrigin(row, column) {
+    this.origin = [row, column];
   }
 }
 
