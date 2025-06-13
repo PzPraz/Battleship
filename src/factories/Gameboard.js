@@ -106,16 +106,9 @@ class Gameboard {
 
     if (this.board[row][column]) {
       const ship = this.board[row][column];
-      const [originRow, originColumn] = ship.origin;
-      let hitIndex = 0;
 
-      // is vertical
-      if (row - 1 >= 0 && this.board[row - 1][column] === ship) {
-        hitIndex = row - originRow;
-      } else if (column - 1 >= 0 && this.board[row][column - 1] === ship) {
-        hitIndex = column - originColumn;
-      }
-      ship.hit(hitIndex);
+      ship.hit([row, column]);
+
       return true;
     } else {
       this.missedShots[row][column] = true;

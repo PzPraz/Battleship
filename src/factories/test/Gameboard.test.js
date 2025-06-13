@@ -58,8 +58,9 @@ describe("Gameboard", () => {
   it("Receives attack", () => {
     gameboard.placeShip(ship, 1, 1, true);
     gameboard.receiveAttack(3, 1);
-
-    expect(gameboard.board[3][1].hits.includes(2)).toBe(true);
+    expect(
+      gameboard.board[3][1].hits.some(([x, y]) => x === 3 && y === 1),
+    ).toBe(true);
   });
 
   it("Keeps track of missed shots", () => {

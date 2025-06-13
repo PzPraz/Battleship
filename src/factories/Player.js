@@ -5,10 +5,13 @@ class Player {
   }
 
   attack(row, column, gameboard) {
-    if (this.hasAlreadyHit(row, column)) return;
+    if (this.hasAlreadyHit(row, column)) return false;
 
     this.alreadyHitCoords.push([row, column]);
+    //gameboard.receiveAttack(row, column);
     gameboard.receiveAttack(row, column);
+
+    return true;
   }
 
   hasAlreadyHit(row, column) {

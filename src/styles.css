@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  padding: 1rem;
+}
+
+header h1 {
+  text-align: center;
+}
+
+#main {
+  width: 100vw;
+  height: 85%;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  padding: 2rem 4rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.playerSide {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 1px solid black;
+}
+
+.computerSide {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 1px solid black;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 2rem;
+}
+
+.modal {
+  margin-top: -9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.play-again {
+  background-color: blue;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  color: white;
+}
+
+.tiles {
+  border: 1px solid black;
+}
+
+.ship {
+  background-color: blue;
+}
+
+.miss {
+  background-color: red;
+}
+
+.hit {
+  background-color: green;
+}
+
+.hide {
+  display: none;
+}

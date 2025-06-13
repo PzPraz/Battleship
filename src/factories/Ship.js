@@ -12,6 +12,10 @@ class Ship {
     this.hits.push(pos);
   }
 
+  isHitAt(i, j) {
+    return this.hits.some(([x, y]) => x === i && y === j);
+  }
+
   isSunk() {
     return this.length == this.hits.length;
   }
