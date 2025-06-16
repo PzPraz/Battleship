@@ -15,6 +15,8 @@ function getCoordinateFromIndex(index) {
 }
 
 function preGame() {
+  clearTiles();
+
   const gameController = GameController();
 
   const playerTurn = gameController.playerTurn;
@@ -101,7 +103,7 @@ const user_lose_text = document.querySelector(".player-lose");
 
 btn_replay.addEventListener("click", () => {
   overlay.classList.add("hide");
-  preGame();
+  playAgain();
 });
 
 function showUserWin() {
@@ -119,4 +121,22 @@ function playAgain() {
   user_win_text.classList.add("hide");
   user_win_text.classList.add("hide");
   preGame();
+}
+
+function clearTiles() {
+  console.log("test");
+
+  const playerTiles = document.querySelectorAll(".playerSide .tiles");
+  const enemyTiles = document.querySelectorAll(".computerSide .tiles");
+
+  for (let i = 0; i < playerTiles.length; i++) {
+    playerTiles[i].classList.remove("ship");
+    playerTiles[i].classList.remove("hit");
+    playerTiles[i].classList.remove("miss");
+  }
+
+  for (let i = 0; i < enemyTiles.length; i++) {
+    enemyTiles[i].classList.remove("hit");
+    enemyTiles[i].classList.remove("miss");
+  }
 }
