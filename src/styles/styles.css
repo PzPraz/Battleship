@@ -34,7 +34,7 @@ header h1 {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  border: 1px solid black;
+  gap: 0.5rem;
 }
 
 .computerSide {
@@ -42,7 +42,7 @@ header h1 {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
-  border: 1px solid black;
+  gap: 0.5rem;
 }
 
 .overlay {
@@ -78,6 +78,7 @@ header h1 {
 
 .tiles {
   border: 1px solid black;
+  border-radius: 5px;
 }
 
 .ship {
